@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{BFF9DC51-E491-687E-80C7-7AA1318462CA}") = "BowGame", "Assembly-CSharp-firstpass.csproj", "{18FAB29F-2CE6-87EC-F2ED-903BD98AD2BC}"
+EndProject
+Project("{BFF9DC51-E491-687E-80C7-7AA1318462CA}") = "BowGame", "Assembly-CSharp.csproj", "{C4DF0346-20B9-A3D0-87B3-44349C38F7AD}"
+EndProject
+Project("{BFF9DC51-E491-687E-80C7-7AA1318462CA}") = "BowGame", "Assembly-CSharp-Editor-firstpass.csproj", "{3D99AE95-03AC-0C59-D135-EB6EC9DF2E8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18FAB29F-2CE6-87EC-F2ED-903BD98AD2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18FAB29F-2CE6-87EC-F2ED-903BD98AD2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18FAB29F-2CE6-87EC-F2ED-903BD98AD2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18FAB29F-2CE6-87EC-F2ED-903BD98AD2BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4DF0346-20B9-A3D0-87B3-44349C38F7AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4DF0346-20B9-A3D0-87B3-44349C38F7AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4DF0346-20B9-A3D0-87B3-44349C38F7AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4DF0346-20B9-A3D0-87B3-44349C38F7AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D99AE95-03AC-0C59-D135-EB6EC9DF2E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D99AE95-03AC-0C59-D135-EB6EC9DF2E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D99AE95-03AC-0C59-D135-EB6EC9DF2E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D99AE95-03AC-0C59-D135-EB6EC9DF2E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
