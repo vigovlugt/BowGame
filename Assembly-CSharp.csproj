@@ -46,8 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\PlayerSetup.cs" />
-     <Compile Include="Assets\Shooting.cs" />
+     <Compile Include="Assets\Scripts\Arrow.cs" />
+     <Compile Include="Assets\Scripts\DontGoThroughThings.cs" />
+     <Compile Include="Assets\Scripts\Health.cs" />
+     <Compile Include="Assets\Scripts\PlayerSetup.cs" />
+     <Compile Include="Assets\Scripts\Shooting.cs" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
