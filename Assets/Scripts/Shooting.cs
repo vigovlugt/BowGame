@@ -19,8 +19,9 @@ public class Shooting : NetworkBehaviour {
 	void CmdFire(){
 		GameObject arrow = (GameObject)Instantiate(Arrow,weaponHolder.transform.position,weaponHolder.transform.rotation);
 		arrow.GetComponent<Arrow>().shooter = gameObject;
-		NetworkServer.Spawn(arrow);
 		Physics.IgnoreCollision(GetComponentInChildren<Collider>(),arrow.GetComponent<Collider>());
+		NetworkServer.Spawn(arrow);
+		
 		
     
 	}

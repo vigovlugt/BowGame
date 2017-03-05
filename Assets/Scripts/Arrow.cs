@@ -26,6 +26,9 @@ public class Arrow: NetworkBehaviour {
 	}
 	void OnTriggerEnter(Collider coll)
 	{
+		if(stuck)
+		return;
+
 		if (!isServer) {
 			return;
 		}

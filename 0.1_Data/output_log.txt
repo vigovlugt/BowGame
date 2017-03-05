@@ -21,19 +21,14 @@ Platform assembly: C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\Unity
 Loading C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.156 seconds
+- Completed reload, in  0.159 seconds
 Platform assembly: C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.014675 ms
+UnloadTime: 1.002131 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1950 -> priority: 1 
-  Thread -> id: 1d4c -> priority: 1 
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:7777}
-ClientDisconnected due to error: Timeout
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
+  Thread -> id: 16b0 -> priority: 1 
+  Thread -> id: 47e4 -> priority: 1 
