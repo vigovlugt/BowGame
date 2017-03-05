@@ -7,10 +7,19 @@ public class PlayerSetup : NetworkBehaviour
 {
     [SerializeField]
     private Behaviour[] turnOffs;
-
-    // Use this for initialization
-    void Start()
+    private GameObject sceneCam;
+    void Awake()
     {
+        if (isLocalPlayer)
+        {
+            //sceneCam = GameObject.Find("SceneCam");
+            //sceneCam.SetActive(false);
+        }
+    }
+        void Start()
+    {
+
+        
         if (isLocalPlayer)
         {
             return;
@@ -21,7 +30,6 @@ public class PlayerSetup : NetworkBehaviour
 
     void turnOff()
     {
-        Camera.main.enabled = false;
 
         for (int i = 0; i < turnOffs.Length; i++)
         {

@@ -21,14 +21,22 @@ Platform assembly: C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\Unity
 Loading C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.169 seconds
+- Completed reload, in  0.028 seconds
 Platform assembly: C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.967348 ms
+UnloadTime: 0.946251 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3ba4 -> priority: 1 
-  Thread -> id: 28c8 -> priority: 1 
+  Thread -> id: 680 -> priority: 1 
+  Thread -> id: 2504 -> priority: 1 
+MatchMakingClient Create :https://mm.unet.unity3d.com/json/reply/CreateMatchRequest
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+MatchMakingClient DropConnection :https://mm.unet.unity3d.com/json/reply/DropConnectionRequest
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
