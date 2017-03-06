@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Networking;
 
 public class PlayerSetup: NetworkBehaviour {
@@ -14,12 +12,13 @@ public class PlayerSetup: NetworkBehaviour {
         }
     }
     void Start() {
-
-
+        if(isLocalPlayer){
+        Util.SetLayerRecursively(gameObject,"LocalPlayer");
+        }
         if (isLocalPlayer) {
             return;
         }
-
+        
         turnOff();
     }
 

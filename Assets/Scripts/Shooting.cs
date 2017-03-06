@@ -11,19 +11,23 @@ public class Shooting : NetworkBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetMouseButtonUp(0)){
-			CmdFire();
+			Fire();
 		}
 	}
 
-	[Command]
-	void CmdFire(){
+	void Fire(){
 		GameObject arrow = (GameObject)Instantiate(Arrow,weaponHolder.transform.position,weaponHolder.transform.rotation);
-		arrow.GetComponent<Arrow>().shooter = gameObject;
-		Physics.IgnoreCollision(GetComponentInChildren<Collider>(),arrow.GetComponent<Collider>());
-		NetworkServer.Spawn(arrow);
+		Arrow arrowScript = arrow.GetComponent<Arrow>();
+		arrowScript.shooter = gameObject;
+		arrowScript.shooterCam = Camera.main.transform;
+		CmdFire(arrow);
+	}
+
+
+	[Command]
+	void CmdFire(GameObject arrow){
+		NetworkServer.SpawnWithClientAuthority(arrow,gameObject);
 		
-		
-    
 	}
 
 }

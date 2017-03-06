@@ -4,15 +4,15 @@ public class Arrow: NetworkBehaviour {
 
 	public Rigidbody rb;
 	private bool stuck = false;
-
 	public GameObject shooter;
+	public Transform shooterCam;
 
 	// Use this for initialization
 	void Start() {
 		if (!isServer) {
 			return;
 		}
-		rb.AddForce(shooter.GetComponentInChildren<Camera>().transform.forward * 30, ForceMode.Impulse);
+		rb.AddForce(shooterCam.forward * 30, ForceMode.Impulse);
 		
 	}
 	void Update() {
@@ -26,6 +26,7 @@ public class Arrow: NetworkBehaviour {
 	}
 	void OnTriggerEnter(Collider coll)
 	{
+
 		if(stuck)
 		return;
 
@@ -35,7 +36,8 @@ public class Arrow: NetworkBehaviour {
 
 		if(coll.gameObject.tag == "Player"){
 			coll.gameObject.GetComponentInParent<Health>().TakeDamage(34);
-			Debug.Log("Triggered");
+			Debug.Log(coll);
+			Debug.Log(shooter.GetComponentInChildren<CapsuleCollider>());
 		}
 
 		stuck = true;
