@@ -20,4 +20,17 @@ public static void SetLayerRecursively(GameObject obj, string newLayer)
     }
 
 
+public static void DestroyChildren(GameObject obj, string _tag){
+
+    foreach (Transform child in obj.transform)
+        {
+            if(child.tag == _tag){
+                GameObject.Destroy(child.gameObject);
+            }
+            DestroyChildren(child.gameObject, _tag);
+        }
+
+
+}
+
 }

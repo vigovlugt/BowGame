@@ -16,7 +16,7 @@ public class Health: NetworkBehaviour {
 	  spawnPoints = FindObjectsOfType<NetworkStartPosition>();
    }
    void Update(){
-		if(Input.GetKey(KeyCode.Backspace)){
+		if(Input.GetKeyDown(KeyCode.Backspace)){
 		Respawn();
 		}
 
@@ -51,7 +51,8 @@ public class Health: NetworkBehaviour {
    public void Respawn(){
 	   if(!isLocalPlayer)
 	   return;
+       Util.DestroyChildren(gameObject,"Arrow");
 		transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position;
-
+        
    }
 }
