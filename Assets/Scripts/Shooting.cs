@@ -17,18 +17,19 @@ public class Shooting : NetworkBehaviour {
 	[Command]
     void CmdFire()
     {
-        // Create the Bullet from the Bullet Prefab
-        var arrowIns = (GameObject)Instantiate(
+		RpcFire(weaponHolder.position,weaponHolder.rotation);
+    }
+
+	[ClientRpc]
+	void RpcFire(Vector3 position, Quaternion rotation){
+		var arrowIns = (GameObject)Instantiate(
             arrow,
-            weaponHolder.position,
-            weaponHolder.rotation);
+            position,
+            rotation);
 
         // Add velocity to the bullet
-        arrowIns.GetComponent<Rigidbody>().velocity = arrowIns.transform.forward * 6;
-
-        // Spawn the bullet on the Clients
-        NetworkServer.Spawn(arrow);
-    }
+        arrowIns.GetComponent<Rigidbody>().velocity = arrowIns.transform.forward * 30;
+	}
 		
 }
 //aa
