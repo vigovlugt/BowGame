@@ -4,15 +4,15 @@ public class Arrow: NetworkBehaviour {
 
 	public Rigidbody rb;
 	private bool stuck = false;
-
 	public float lifeTime;
+	public float force;
 
 	// Use this for initialization
 	void Start() {
 		if (!isServer) {
 			return;
 		}
-				rb.velocity = transform.forward * 30;
+				rb.velocity = transform.forward * force * 50;
 	}
 	void Update() {
 		if(!stuck && rb.velocity != Vector3.zero){
@@ -27,7 +27,7 @@ public class Arrow: NetworkBehaviour {
 		if(stuck)
 		return;
 
-		if(lifeTime <= 0.3f)
+		if(lifeTime <= 0.1f)
 		return;
 
 		if(coll.tag == "Arrow")
