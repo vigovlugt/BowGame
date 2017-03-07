@@ -52,6 +52,7 @@ public class Health: NetworkBehaviour {
 	   if(!isLocalPlayer)
 	   return;
        Util.DestroyChildren(gameObject,"Arrow");
+       curHealth = maxHealth;
 		transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position;
         
    }

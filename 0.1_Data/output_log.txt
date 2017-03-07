@@ -21,9 +21,50 @@ Platform assembly: C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\Unity
 Loading C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.024 seconds
+- Completed reload, in  0.157 seconds
 Platform assembly: C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Vigo\Documents\GitHub\BowGame\0.1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.958511 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 4730 -> priority: 1 
+  Thread -> id: 2868 -> priority: 1 
+shoot
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+0.8164086
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+shoot
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+0.5499117
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+shoot
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+0.4498489
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+shoot
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+0.4833472
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+shoot
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+

@@ -17,19 +17,13 @@ public class Shooting : NetworkBehaviour {
 	[Command]
     void CmdFire()
     {
-		RpcFire(weaponHolder.position,weaponHolder.rotation);
-    }
-
-	[ClientRpc]
-	void RpcFire(Vector3 position, Quaternion rotation){
-		var arrowIns = (GameObject)Instantiate(
-            arrow,
-            position,
-            rotation);
+		print("shoot");
+		var arrowIns = (GameObject)Instantiate(arrow,weaponHolder.position,weaponHolder.rotation);
 
         // Add velocity to the bullet
-        arrowIns.GetComponent<Rigidbody>().velocity = arrowIns.transform.forward * 30;
-	}
+        
+		NetworkServer.Spawn(arrowIns);
+    }
 		
 }
 //aa
