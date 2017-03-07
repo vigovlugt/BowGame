@@ -15,8 +15,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_RunSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
         [SerializeField] private float m_JumpSpeed;
-        [SerializeField] private bool canDoubleJump;
-        [SerializeField] private bool usedDoubleJump;
+        [SerializeField] private bool v_canDoubleJump;
+        private bool v_usedDoubleJump;
+        [SerializeField] private bool v_autoJump;  
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
         [SerializeField] private MouseLook m_MouseLook;
@@ -57,6 +58,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            v_autoJump = false;
         }
 
 
@@ -65,9 +67,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             RotateView();
             // the jump state needs to read here to make sure it is not missed
-            if (!m_Jump)
+            if (!m_Jump && m_CharacterController.isGrounded)
             {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+                if(!v_autoJump){
+                    m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");//.............................
+                }else
+                {
+                    m_Jump = CrossPlatformInputManager.GetButton("Jump");
+                }
             }
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)

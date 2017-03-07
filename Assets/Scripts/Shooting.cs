@@ -3,31 +3,32 @@ using UnityEngine.Networking;
 public class Shooting : NetworkBehaviour {
 	
 	[SerializeField]
-	private GameObject Arrow;
+	private GameObject arrow;
 
 	[SerializeField]
-	private GameObject weaponHolder;
+	private Transform weaponHolder;
 
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetMouseButtonUp(0)){
-			Fire();
+			CmdFire();
 		}
 	}
-
-	void Fire(){
-		GameObject arrow = (GameObject)Instantiate(Arrow,weaponHolder.transform.position,weaponHolder.transform.rotation);
-		Arrow arrowScript = arrow.GetComponent<Arrow>();
-		arrowScript.shooter = gameObject;
-		arrowScript.shooterCam = Camera.main.transform;
-		CmdFire(arrow);
-	}
-
-
 	[Command]
-	void CmdFire(GameObject arrow){
-		NetworkServer.SpawnWithClientAuthority(arrow,gameObject);
-		
-	}
+    void CmdFire()
+    {
+        // Create the Bullet from the Bullet Prefab
+        var arrowIns = (GameObject)Instantiate(
+            arrow,
+            weaponHolder.position,
+            weaponHolder.rotation);
 
+        // Add velocity to the bullet
+        arrowIns.GetComponent<Rigidbody>().velocity = arrowIns.transform.forward * 6;
+
+        // Spawn the bullet on the Clients
+        NetworkServer.Spawn(arrow);
+    }
+		
 }
+//aa
