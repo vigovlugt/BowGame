@@ -23,6 +23,7 @@ public class Shooting : NetworkBehaviour {
         // Add velocity to the bullet
         
 		NetworkServer.Spawn(arrowIns);
+		Destroy(arrowIns, 5.0f);
     }
 		
 }

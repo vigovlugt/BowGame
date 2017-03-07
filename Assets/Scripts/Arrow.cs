@@ -30,6 +30,9 @@ public class Arrow: NetworkBehaviour {
 		if(lifeTime <= 0.3f)
 		return;
 
+		if(coll.tag == "Arrow")
+		return;
+
 		print(lifeTime);
 		if(coll.gameObject.tag == "Player"){
 			coll.gameObject.GetComponentInParent<Health>().TakeDamage(34);
